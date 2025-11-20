@@ -80,9 +80,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="aseprite\Arrows.ase" />
+    <None Include="aseprite\IconVFE16.ase" />
+    <None Include="aseprite\IconVFE256.ase" />
+    <None Include="aseprite\IconVFE32.ase" />
+    <None Include="aseprite\IconVFE48.ase" />
+    <None Include="aseprite\Png\Arrows1.png" />
+    <None Include="aseprite\Png\Arrows2.png" />
+    <None Include="aseprite\Png\Arrows3.png" />
+    <None Include="aseprite\Png\Arrows4.png" />
+    <None Include="aseprite\Png\icon.ico" />
+    <None Include="aseprite\Png\x16.png" />
+    <None Include="aseprite\Png\x256.png" />
+    <None Include="aseprite\Png\x32.png" />
+    <None Include="aseprite\Png\x48.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="aseprite" />
+    <Folder Include="aseprite\Png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
