@@ -1,10 +1,141 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Window
 	x:Class="VFE.Window1" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:VFE="clr-namespace:VFE"
 	Height="300"
 	Width="300"
 	Title="Vuki's FileExplorer"
 	MinWidth="640"
-	MinHeight="480">
-	<Grid></Grid>
+	MinHeight="480" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	Icon="pack://application:,,,/VFE;component/icon.ico">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition
+				Height="0.0203175506894479*" />
+			<RowDefinition
+				Height="0.0866632795435239*" />
+		</Grid.RowDefinitions>
+		<TextBox
+			Height="20"
+			Grid.Column="0"
+			Grid.ColumnSpan="2"
+			Grid.Row="0"
+			HorizontalAlignment="Stretch"
+			VerticalAlignment="Top"
+			Margin="0,47.2,0,0" />
+		<Menu
+			Height="20"
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Stretch"
+			VerticalAlignment="Top"
+			Margin="0,-1.2,0,0"
+			Grid.ColumnSpan="2">
+			<MenuItem
+				VerticalAlignment="Stretch"
+				Header="File">
+				<MenuItem
+					Header="New" />
+				<MenuItem
+					Header="New Window" />
+				<Separator />
+				<MenuItem
+					Header="Copy" />
+				<MenuItem
+					Header="Paste" />
+				<Separator />
+				<MenuItem
+					Header="Exit"></MenuItem>
+			</MenuItem>
+		</Menu>
+		<Grid
+			VerticalAlignment="Stretch"
+			HorizontalAlignment="Stretch"
+			Grid.Column="1"
+			Grid.Row="1"
+			Grid.ColumnSpan="2"
+			Background="#FFD1D1D1">
+			<ListView
+				Grid.Column="0"
+				Grid.Row="0"
+				HorizontalAlignment="Stretch"
+				VerticalAlignment="Stretch"
+				Background="Red" />
+		</Grid>
+		<TreeView
+			Grid.Column="0"
+			Grid.Row="1"
+			Margin="-3,0.200000000000003,0,0"
+			HorizontalAlignment="Stretch"
+			VerticalAlignment="Stretch"
+			Background="#FF8C0000"
+			x:Name="FolderView"
+			ItemsSource="{Binding RootFolders}"	>
+			<TreeView.ItemContainerStyle>
+                <Style TargetType="{x:Type TreeViewItem}">
+                    <!-- Bind the IsExpanded property to our model's IsExpanded property 
+                         This ensures the event fires when the user clicks the '+' -->
+                    <Setter Property="IsExpanded" Value="{Binding HasChildren, Mode=OneWay}" />
+                    <EventSetter Event="Expanded" Handler="TreeViewItem_Expanded" />
+                </Style>
+            </TreeView.ItemContainerStyle>
+
+            <!-- 
+            This HierarchicalDataTemplate tells the TreeView how to render
+            a FileSystemItem object and how to find its children. 
+            -->
+            <TreeView.Resources>
+                <HierarchicalDataTemplate DataType="{x:Type VFE:FileSystemItem}" 
+                                            ItemsSource="{Binding Children}">
+                    <StackPanel Orientation="Horizontal">
+                        <!-- Icon based on type (using simple text/symbols for C# 5.0 compatibility) -->
+                        <TextBlock FontWeight="Bold" Foreground="#007ACC">
+                            <TextBlock.Style>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="Text" Value="📁 "/>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Type}" Value="{x:Static VFE:ItemType.File}">
+                                            <Setter Property="Text" Value="📄 "/>
+                                            <Setter Property="Foreground" Value="#333333"/>
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding Type}" Value="{x:Static VFE:ItemType.Drive}">
+                                            <Setter Property="Text" Value="🖴 "/>
+                                            <Setter Property="Foreground" Value="#2ECC71"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
+                        
+                        <!-- The name of the item -->
+                        <TextBlock Text="{Binding Name}" Margin="5,0,0,0" />
+                        
+                        <!-- Show FullPath in a subtle way -->
+                        <TextBlock Text="{Binding FullPath, StringFormat=' ({0})'}" 
+                                   Foreground="#999" FontSize="10" VerticalAlignment="Center" 
+                                   Margin="5,0,0,0">
+                            <TextBlock.Style>
+                                <Style TargetType="TextBlock">
+                                    <!-- Only show path for drives and folders -->
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Type}" Value="{x:Static VFE:ItemType.File}">
+                                        	
+                                            <Setter Property="Visibility" Value="Collapsed"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
+                    </StackPanel>
+                </HierarchicalDataTemplate>
+            </TreeView.Resources>
+		</TreeView>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition
+				Width="0.186099000455996*" />
+			<ColumnDefinition
+				Width="0.813900999544004*" />
+		</Grid.ColumnDefinitions>
+	</Grid>
 </Window>
