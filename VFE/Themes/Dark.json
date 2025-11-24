@@ -1,0 +1,11 @@
+﻿{
+  "Name": "CustomDark",
+  "Colors": {
+    "BackgroundBrush": "#FF222222",
+    "ForegroundBrush": "#FFFFFFFF",
+    "AccentColor": "#FF5DADE2" 
+  },
+  "Styles": [
+    // You could define styles here too, e.g., font sizes
+  ]
+}

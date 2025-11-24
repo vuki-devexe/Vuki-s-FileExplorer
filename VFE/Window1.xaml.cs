@@ -14,11 +14,10 @@ using System.ComponentModel;
 using System.Windows;
 using System.Windows.Controls;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 
 namespace VFE
 {
-	
-	
 	public enum ItemType
     {
         Drive,

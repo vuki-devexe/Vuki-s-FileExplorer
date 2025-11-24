@@ -2,7 +2,7 @@
  * Created by SharpDevelop.
  * User: vukiYT2011
  * Date: 11/24/2025
- * Time: 03:44
+ * Time: 03:51
  * 
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
@@ -16,14 +16,14 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 
-namespace VFE.Themes
+namespace VFE
 {
 	/// <summary>
-	/// Interaction logic for Dark.xaml
+	/// Interaction logic for Settings.xaml
 	/// </summary>
-	public partial class Dark : Window
+	public partial class Settings : Window
 	{
-		public Dark()
+		public Settings()
 		{
 			InitializeComponent();
 		}
