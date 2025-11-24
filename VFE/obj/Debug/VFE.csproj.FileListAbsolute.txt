@@ -1,0 +1,16 @@
+C:\Users\vukiYT2011\Documents\SharpDevelop Projects\Vuki's FileExplorer\VFE\bin\Debug\VFE.exe.config
+C:\Users\vukiYT2011\Documents\SharpDevelop Projects\Vuki's FileExplorer\VFE\bin\Debug\VFE.exe
+C:\Users\vukiYT2011\Documents\SharpDevelop Projects\Vuki's FileExplorer\VFE\bin\Debug\VFE.pdb
+C:\Users\vukiYT2011\Documents\SharpDevelop Projects\Vuki's FileExplorer\VFE\obj\Debug\VFE.csprojResolveAssemblyReference.cache
+C:\Users\vukiYT2011\Documents\SharpDevelop Projects\Vuki's FileExplorer\VFE\obj\Debug\Window1.baml
+C:\Users\vukiYT2011\Documents\SharpDevelop Projects\Vuki's FileExplorer\VFE\obj\Debug\Window1.g.cs
+C:\Users\vukiYT2011\Documents\SharpDevelop Projects\Vuki's FileExplorer\VFE\obj\Debug\App.g.cs
+C:\Users\vukiYT2011\Documents\SharpDevelop Projects\Vuki's FileExplorer\VFE\obj\Debug\VFE_MarkupCompile.cache
+C:\Users\vukiYT2011\Documents\SharpDevelop Projects\Vuki's FileExplorer\VFE\obj\Debug\VFE.g.resources
+C:\Users\vukiYT2011\Documents\SharpDevelop Projects\Vuki's FileExplorer\VFE\obj\Debug\VFE.exe
+C:\Users\vukiYT2011\Documents\SharpDevelop Projects\Vuki's FileExplorer\VFE\obj\Debug\VFE.pdb
+C:\Users\vukiYT2011\Documents\SharpDevelop Projects\Vuki's FileExplorer\VFE\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\vukiYT2011\Documents\SharpDevelop Projects\Vuki's FileExplorer\VFE\obj\Debug\VFE_MarkupCompile.lref
+C:\Users\vukiYT2011\Documents\SharpDevelop Projects\Vuki's FileExplorer\VFE\obj\Debug\Settings.baml
+C:\Users\vukiYT2011\Documents\SharpDevelop Projects\Vuki's FileExplorer\VFE\obj\Debug\Themes\Dark.baml
+C:\Users\vukiYT2011\Documents\SharpDevelop Projects\Vuki's FileExplorer\VFE\obj\Debug\Settings.g.cs
