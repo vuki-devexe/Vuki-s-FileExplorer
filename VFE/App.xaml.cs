@@ -11,5 +11,12 @@ namespace VFE
 	/// </summary>
 	public partial class App : Application
 	{
+       public static void ChangeTheme(string themeFileName)
+		{
+		    Application.Current.Resources.MergedDictionaries.Clear();
+		    Application.Current.Resources.MergedDictionaries.Add(
+		        new ResourceDictionary() { Source = new Uri($"Themes/{themeFileName}.xaml", UriKind.Relative) }
+		    );
+		}
 	}
 }
